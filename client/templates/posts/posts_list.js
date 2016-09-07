@@ -1,5 +1,7 @@
 Template.postsList.helpers({
   posts: function() {
-    return Posts.find({author: 'Tom Coleman'});
+    // Con lagun filtro
+    //return Posts.find({author: 'Tom Coleman'});
+    return Posts.find({});
   }
 });
