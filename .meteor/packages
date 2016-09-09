@@ -24,3 +24,6 @@ underscore
 iron:router
 sacha:spin
 session
+ian:accounts-ui-bootstrap-3
+npm-bcrypt@0.8.7
+accounts-password
