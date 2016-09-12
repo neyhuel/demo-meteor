@@ -8,6 +8,8 @@ Template.postSubmit.events({
       flagged: $(e.target).find('[name=flagged]').is(":checked")
     };
 
+    console.log(post)
+
     Meteor.call('postInsert', post, function(error, result) {
       // display the error to the user and abort
       if (error)
@@ -16,4 +18,3 @@ Template.postSubmit.events({
     });
   }
 });
-
