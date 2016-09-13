@@ -1,5 +1,9 @@
-Meteor.publish('posts', function() {
-	return Posts.find({ flagged: false });
+Meteor.publish('posts', function(options) {
+    check(options, {
+        sort: Object,
+        limit: Number
+    });
+    return Posts.find({ flagged: false }, options);
 });
 
 Meteor.publish('comments', function(postId) {
